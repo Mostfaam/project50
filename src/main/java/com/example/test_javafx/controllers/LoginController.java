@@ -23,7 +23,7 @@ public class LoginController {
     Navigation navigation = new Navigation();
     User u = new User();
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+    int index=0;
     public void dirictor(ActionEvent actionEvent) {
     }
 
@@ -40,20 +40,15 @@ public boolean varUserName(){
 boolean torf=false;
     for(int i=0;i<dataModelTeatcher.getTeatchers().size();i++){
         if(userName.getText().equals(dataModelTeatcher.getTeatchers().get(i).getUsername())){
-
+                index=i;
                 torf =true;
             }
             }
 return torf;    }
     public boolean varPassword(){
-        boolean torf=false;
-        for(int i=0;i<dataModelTeatcher.getTeatchers().size();i++){
-            if(pass.getText().equals(dataModelTeatcher.getTeatchers().get(i).getPassword())){
 
-                torf =true;
-            }
-        }
-        return torf;    }
+           return pass.getText().equals(dataModelTeatcher.getTeatchers().get(index).getPassword());
+    }
     public void loginTeatcher(ActionEvent actionEvent) throws IOException {
 
         if (dataModelTeatcher.getTeatchers() == null) {
@@ -67,7 +62,7 @@ return torf;    }
                     alert.setContentText("please contact admin to add you to teatchers");
                     alert.showAndWait();
                 }
-            } else{
+            } else {
                 if (isManeger()) {
                     navigation.navigateTo(rootPane, navigation.MANGER_FXML);
                 } else {
