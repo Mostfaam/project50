@@ -40,8 +40,8 @@
                 <Font size="17.0" />
             </font>
         </Label>
-        <TextField fx:id="userName" layoutX="208.0" layoutY="170.0" prefHeight="25.0" prefWidth="187.0" style="-fx-border-radius: A7FA7A;" />
-        <TextField fx:id="pass" layoutX="208.0" layoutY="240.0" prefHeight="25.0" prefWidth="187.0" />
+        <TextField fx:id="userName" layoutX="208.0" layoutY="170.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-radius: 20;" />
+        <TextField fx:id="pass" layoutX="208.0" layoutY="240.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-radius: 20;" />
       <Label layoutX="544.0" layoutY="224.0" text="hellow teather">
          <font>
             <Font size="32.0" />
